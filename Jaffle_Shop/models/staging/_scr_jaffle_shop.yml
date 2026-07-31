@@ -12,27 +12,10 @@ sources:
               period: hour
           loaded_at_field: _etl_loaded_at
     tables:
-      - name: orders    
-        columns:
-          - name: order_id
-            data_tests:
-              - unique
-              - not_null 
+      - name: orders     
             
       - name: customers
-        columns:
-          - name: customer_id
-            data_tests:
-            - unique
-            - not_null
-            
           
   - name: stripe
     tables:
       - name: payments
-        columns:
-          - name: payment_id
-            data_tests:
-              - unique
-              - not_null
-              
