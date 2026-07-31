@@ -5,4 +5,4 @@ select
   status,
   amount,
   created
-from raw.stripe.payments
+from {{ source('stripe', 'payments') }}
