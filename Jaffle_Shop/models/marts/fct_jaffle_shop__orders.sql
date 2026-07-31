@@ -12,12 +12,13 @@ payments as
 final as
 (
     select 
-      o.order_id,
-      o.customer_id,
-      p.amount
-
-    from orders o 
-    join payments p on o.order_id = p.order_id
+        orders.order_id,
+        orders.customer_id,
+        orders.order_date,
+        orders.status,
+        payments.amount
+    from orders 
+    left join payments using (order_id)
     
 )
 
